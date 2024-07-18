@@ -1,6 +1,7 @@
+
 import { NextResponse } from "next/server";
 
-export const listaDeCarros = [
+export const listaDeCarro = [
     {
         id: 1,
         titulo: "718 Cayman",
