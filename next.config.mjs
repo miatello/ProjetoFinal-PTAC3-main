@@ -2,7 +2,7 @@
 const nextConfig = {
 
     images:{
-        domains:["th.bing.com"] 
+        domains:["files.porsche.com"] 
     }
 };
 

@@ -21,19 +21,17 @@ export default function Main() {
         <>
 
             <main className={styles.main}>
-                <div className={styles.petList}>
+                <div className={styles.carList}>
                     {listCarros.map((item) => (
                         <div key={item.id} className={styles.cardPet}>
-                            <h3>{item.nome}</h3>
+                            <h3>{item.titulo}</h3>
                             <Image
-                                src={item.link}
-                                width={100}
-                                height={100}
+                                src={item.imagem}
+                                width={300}
+                                height={400}
                             />
-                            <p>{item.nome}</p>
-                            <p>{item.autor}</p>
-                            <p>{item.anoDeFabrica}</p>
                             <p>{item.marca}</p>
+                            <p>{item.cor}</p>
                         </div>
                     ))}
                 </div>
