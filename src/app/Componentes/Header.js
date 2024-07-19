@@ -1,7 +1,10 @@
+import React from "react";
+import Link from "next/link";
+import styles from "../css/header.module.css";
+
+
 export default function Header (){
     return(
-        <div>
-        <h1>Copyryter</h1>
-        </div>
-    )
+        <h1>Home</h1>
+    ) 
 }

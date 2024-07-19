@@ -29,7 +29,7 @@ export const listaDeCarros = [
         marca: "Porsche",
         cor: "Rosa Magenta",
         imagem: "https://files.porsche.com/filestore/image/multimedia/none/982-718-bo-se-modelimage-sideshot/thumbwhite/a43e6499-4ea4-11ed-80f7-005056bbdc38;sL;twebp/porsche-thumbwhite.webp"
-    }
+    },
 ];
 
 export async function GET(){
