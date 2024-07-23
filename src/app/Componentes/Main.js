@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "../css/main.module.css";
 import Loading from "./Loading";
 import Erro from "./Erro";
+import Link from "next/link";
 
 
 
@@ -14,7 +15,7 @@ export default function Main() {
     useEffect(() => {
         const getCarros = async () => {
             try{
-            const response = await fetch('/api1');
+            const response = await fetch('/api');
             const data = await response.json();
             setListCarros(data);
             } catch{
@@ -38,7 +39,7 @@ export default function Main() {
                 <div className={styles.carList}>
                     {listCarros.map((item) => (
                         <div key={item.id} className={styles.cardCar}>
-                            <h3>{item.nome}</h3>
+                            <Link href={"/objeto/" + item.id}><h3>{item.nome}</h3></Link>
                             <Image
                                 src={item.link}
                                 width={300}

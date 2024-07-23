@@ -1,12 +1,19 @@
-import Image from "next/image";
-import style from "../page.module.css"
+import Image from "next/image"
 
-export default function Objeto(params){
-    const response = await fetch ('http://localhost;3000/api/' + params.id)
+export default async function Objeto({params}){
+    const response = await fetch ('http://localhost:3000/api/' + params.id)
     const data = await response.json()
     return(
         <div>
-            <p>{data.titulo}</p>
+            <h3>{data.nome}</h3>
+                            <Image
+                                src={data.link}
+                                width={300}
+                                height={400}
+                            />
+                            <p>{data.autor}</p>
+                            <p>{data.marca}</p>
+                            <p>{data.anoDeFabrica}</p>
         </div>
     )
 } 
