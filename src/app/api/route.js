@@ -1,20 +1,20 @@
-<<<<<<< HEAD
+
 import { NextResponse } from "next/server";
 import { listaDeFilmes } from "../route";
 
-export async function GET(req){
+export async function GET(req) {
     const id = parseInt(req.url.split('/api/')[1]);
     let objeto = null;
-    listaDeFilmes.forEach((obj)=> {
-        if(obj.id == id){
-           objeto = obj
+    listaDeFilmes.forEach((obj) => {
+        if (obj.id == id) {
+            objeto = obj
         }
     });
     return NextResponse.json(objeto);
 }
 
 
-=======
+
 
 import { NextResponse } from "next/server";
 
@@ -49,7 +49,7 @@ export const listaDeCarros = [
     },
 ];
 
-export async function GET(){
+export async function GET() {
     return NextResponse.json(listaDeCarros)
 }
->>>>>>> d505074e24e2f791c4af1dd029c3fa01c171eab0
+
