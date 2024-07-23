@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/app/api/id/route.js
 export const listaDeCarro = [
     {
         id: 1,
@@ -86,3 +87,18 @@ export const listaDeCarro = [
 export async function GET() {
     return NextResponse.json(listaDeCarro);
 }
+=======
+import { NextResponse } from "next/server";
+import { listaDeCarros } from "../route";
+
+export async function GET(req) {
+    const id = parseInt(req.url.split('/api/')[1]);
+    let objeto = null;
+    listaDeCarros.forEach((obj) => {
+        if (obj.id == id) {
+            objeto = obj
+        }
+    });
+    return NextResponse.json(objeto);
+}
+>>>>>>> d505074e24e2f791c4af1dd029c3fa01c171eab0:src/app/api/[id]/route.js
