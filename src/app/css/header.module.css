@@ -10,4 +10,17 @@
     margin: 0;
     font-family: 'Arial', sans-serif;
   }
-  
+
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+  .menu li {
+    display: inline;
+  }
+
+  .centrodireito {
+    margin-left: auto;
+  }
