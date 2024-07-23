@@ -8,15 +8,24 @@ import Loading from "./Loading";
 
 export default function Main() {
     const [listCarros, setListCarros] = useState([]);
+    const [isErro, setisErro] = useState(false);
 
     useEffect(() => {
         const getCarros = async () => {
+            try{
             const response = await fetch('/api');
             const data = await response.json();
             setListCarros(data);
+            } catch{
+                setisErro(true)
+            }
         }
         getCarros();
     }, []);
+
+    if(isErro == true) {
+        return <Erro/>;
+      }
 
     if( listCarros[0] == null) {
         return <Loading />;
