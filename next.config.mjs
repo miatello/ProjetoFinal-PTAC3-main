@@ -2,7 +2,7 @@
 const nextConfig = {
 
     images:{
-        domains:["files.porsche.com"] 
+        domains:["upload.wikimedia.org"] 
     }
 };
 

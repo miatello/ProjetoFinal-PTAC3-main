@@ -1,55 +1,92 @@
-
-import { NextResponse } from "next/server";
-import { listaDeFilmes } from "../route";
-
-export async function GET(req) {
-    const id = parseInt(req.url.split('/api/')[1]);
-    let objeto = null;
-    listaDeFilmes.forEach((obj) => {
-        if (obj.id == id) {
-            objeto = obj
-        }
-    });
-    return NextResponse.json(objeto);
-}
-
-
-
-
 import { NextResponse } from "next/server";
 
 export const listaDeCarros = [
     {
         id: 1,
-        titulo: "718 Cayman",
-        marca: "Porsche",
-        cor: "Preto",
-        imagem: "https://files.porsche.com/filestore/image/multimedia/none/982-718-c7-modelimage-sideshot/thumbwhite/230138a1-e874-11ea-80cd-005056bbdc38;sL;twebp/porsche-thumbwhite.webp"
+        nome: "Nissan Skyline GT-R R34",
+        autor: "Craig Lieberman",
+        anoDeFabrica: 1998,
+        marca: "Nissan",
+        link: "https://th.bing.com/th/id/OIP.CIWHjand_JCcY5OlHjLEnAHaEo?rs=1&pid=ImgDetMain"
     },
     {
         id: 2,
-        titulo: "718 Boxster",
-        marca: "Porsche",
-        cor: "Cinza",
-        imagem: "https://files.porsche.com/filestore/image/multimedia/none/982-718-bo-modelimage-sideshot/thumbwhite/93fa2a92-fee1-11ed-8103-005056bbdc38;sL;twebp/porsche-thumbwhite.webp"
+        nome: "Nissan Skyline GT-R R35",
+        autor: "Craig Lieberman",
+        anoDeFabrica: 2007,
+        marca: "Nissan",
+        link: "https://th.bing.com/th/id/OIP.K1R-2ebwj6YDgTYEkrqa1wHaE8?rs=1&pid=ImgDetMain"
     },
     {
         id: 3,
-        titulo: "718 Cayman Style Edition",
-        marca: "Porsche",
-        cor: "Cinza Azulado",
-        imagem: "https://files.porsche.com/filestore/image/multimedia/none/982-718-c7-se-modelimage-sideshot/thumbwhite/7bdc3629-4ea4-11ed-80f7-005056bbdc38;sL;twebp/porsche-thumbwhite.webp"
+        nome: "Porsche 911 turbo s",
+        autor: "Ferdinand Porshe",
+        anoDeFabrica: 1997,
+        marca: "Porshe",
+        link: "https://th.bing.com/th/id/R.500d3c652085cb4524ad492e32a30a85?rik=W%2bNUWYHgzmvRog&pid=ImgRaw&r=0"
     },
     {
         id: 4,
-        titulo: "718 Boxster Style Edition",
-        marca: "Porsche",
-        cor: "Rosa Magenta",
-        imagem: "https://files.porsche.com/filestore/image/multimedia/none/982-718-bo-se-modelimage-sideshot/thumbwhite/a43e6499-4ea4-11ed-80f7-005056bbdc38;sL;twebp/porsche-thumbwhite.webp"
+        nome: "Lamborghini Huracan",
+        autor: "Ferrucio Lamborghini",
+        anoDeFabrica: 2014,
+        marca: "Lamborghini",
+        link: "https://th.bing.com/th/id/OIP.GhIZmSFgogkw2Ssce-dwGgHaEK?rs=1&pid=ImgDetMain"
     },
-];
+
+    {
+        id: 5,
+        nome: "Bugatti Bolide",
+        autor: "Saggittarius A",
+        anoDeFabrica: 2021,
+        marca: "Bugatti",
+        link: "https://cdn.motor1.com/images/mgl/YA3zrl/s1/bugatti-bolide-track-testing.webp"
+    },
+    {
+        id: 6,
+        nome: "ferrari sf90",
+        autor: "montadora italiana Ferrari",
+        anoDeFabrica: 2019,
+        marca: "Ferrari",
+        link: "https://cdn.motor1.com/images/mgl/xqq24z/s1/novitec-ferrari-sf90-stradale-2022.webp"
+    },
+    {
+        id: 7,
+        nome: "bmw 320i",
+        autor: "fábrica do BMW Group",
+        anoDeFabrica: 2014,
+        marca: "BMW",
+        link: "https://cdn.motor1.com/images/mgl/KPK4R/s3/bmw-320i-m-sport-2021-teste-br.jpg"
+    },
+    {
+        id: 8,
+        nome: "Chevrolet Corvette",
+        autor: "General Motors",
+        anoDeFabrica: 1953,
+        marca: "Chevrolet",
+        link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1JcLy-MqfpeS8Kgu4u80IvxzuZg23Z0BEJA&s"
+    },
+    {
+        id: 9,
+        nome: "McLaren p1",
+        autor: " Ron Dennis",
+        anoDeFabrica: 2010,
+        marca: "McLaren ",
+        link: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Paris_Motor_Show_2012_%288065253081%29.jpg/800px-Paris_Motor_Show_2012_%288065253081%29.jpg"
+    },
+    {
+        id: 10,
+        nome: "McLaren p1",
+        autor: " Ron Dennis",
+        anoDeFabrica: 2010,
+        marca: "McLaren ",
+        link: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Paris_Motor_Show_2012_%288065253081%29.jpg/800px-Paris_Motor_Show_2012_%288065253081%29.jpg"
+    }
+
+]
 
 export async function GET() {
-    return NextResponse.json(listaDeCarros)
+    return NextResponse.json(listaDeCarros);
 }
+
 
