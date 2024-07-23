@@ -1,8 +1,8 @@
 "use client"
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import styles from "../styles.css";
-import Link from 'next/link';
+import styles from "../css/main.module.css";
+import Loading from "./Loading";
 
 
 
@@ -18,21 +18,25 @@ export default function Main() {
         getCarros();
     }, []);
 
+    if( listCarros[0] == null) {
+        return <Loading />;
+    }
+
     return (
         <>
-
             <main className={styles.main}>
                 <div className={styles.carList}>
                     {listCarros.map((item) => (
-                        <div key={item.id} className={styles.cardPet}>
-                            <h3>{item.titulo}</h3>
+                        <div key={item.id} className={styles.cardCar}>
+                            <h3>{item.nome}</h3>
                             <Image
-                                src={item.imagem}
+                                src={item.link}
                                 width={300}
                                 height={400}
                             />
+                            <p>{item.autor}</p>
                             <p>{item.marca}</p>
-                            <p>{item.cor}</p>
+                            <p>{item.anoDeFabrica}</p>
                         </div>
                     ))}
                 </div>
